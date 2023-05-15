@@ -19,7 +19,8 @@ const names = ["Alice", "Bob", "Charlie"];
 // ============== Your answer here:
 const capsNames = function (names) {
   return names.map(
-    (listOfNames) => (listOfNames = listOfNames.toUpperCase(names))
+    (listOfNames) =>
+      (listOfNames = listOfNames[0].toUpperCase() + listOfNames.slice(1))
   );
 };
 console.log(capsNames(names));
@@ -68,7 +69,9 @@ const fruits = ["apple", "banana", "orange"];
 //  name is capitalized using the map method. Ex, Apple ...
 // ============== Your answer here:
 const fruitsCaps = function (fruits) {
-  return fruits.map((eachFruit) => eachFruit.toUpperCase(eachFruit));
+  return fruits.map(
+    (eachFruit) => eachFruit[0].toUpperCase() + eachFruit.slice(1)
+  );
 };
 console.log(fruitsCaps(fruits));
 // ==============
